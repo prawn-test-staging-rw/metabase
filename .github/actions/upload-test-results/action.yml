@@ -49,6 +49,8 @@ runs:
       uses: trunk-io/analytics-uploader@main
       with:
         junit-paths: ${{ inputs.input-path }}
-        org-slug: metabase
+        org-slug: prawn-test-staging-rw
         token: ${{ inputs.trunk-api-token }}
       continue-on-error: true
+      env:
+        TRUNK_PUBLIC_API_ADDRESS: https://api.trunk-staging.io
